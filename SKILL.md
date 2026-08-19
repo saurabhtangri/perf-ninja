@@ -129,7 +129,11 @@ error, validation failure, missing perf counter, missing AVX2 etc.) are
 
 For every lab, write a `RESULTS.md` next to the lab's `README.md` that
 follows this five-section structure. The key shift from the upstream
-README is **lead with the picture, not the algorithm name**.
+README is **lead with the picture, not the algorithm name**. Write every
+section under the house style in
+[`WRITING_STANDARDS.md`](./WRITING_STANDARDS.md) (a hybrid of ASD-STE100
+and ISO 24495-1) — short sentences, one idea per sentence, consistent
+terminology, normal technical vocabulary.
 
 ```markdown
 # <Lab name> — Results
@@ -167,8 +171,10 @@ to.
 ### 5. Cross-lab `PATTERNS.md`
 
 After every per-lab file is written, aggregate the patterns observed into
-a single repo-level guide. Group by Top-Down category (Core Bound, Memory
-Bound, Bad Speculation, Frontend, Misc). For each pattern, list:
+a single repo-level guide, written under the same
+[`WRITING_STANDARDS.md`](./WRITING_STANDARDS.md) house style as
+`RESULTS.md`. Group by Top-Down category (Core Bound, Memory Bound, Bad
+Speculation, Frontend, Misc). For each pattern, list:
 
 * the *symptom* in a profile (e.g. "high branch-miss rate", "high LLC-miss
   rate", "high backend stalls with low IPC");
